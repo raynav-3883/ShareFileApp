@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* create component class */
+@layer components{
+  .button{
+    @apply p-2 my-5 bg-gray-900 rounded-md w-44 focus:outline-none
+  }
+}
+/* @layer components{
+  .className{
+    @apply <tailwind classes>
+  }
+} */
+
+/* global.css */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Add these animations to your existing globals.css */
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+  }
+  to { 
+    opacity: 1; 
+  }
+}
+
+@keyframes slideIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes slideDown {
+  from { 
+    opacity: 0; 
+    transform: translateY(-20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes shimmer {
+  0% { 
+    transform: translateX(-100%); 
+  }
+  100% { 
+    transform: translateX(100%); 
+  }
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-20px); 
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    opacity: 1; 
+  }
+  50% { 
+    opacity: 0.5; 
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { 
+    transform: translateY(0); 
+  }
+  50% { 
+    transform: translateY(-10px); 
+  }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation Classes */
+.animate-fadeIn { 
+  animation: fadeIn 0.6s ease-out forwards; 
+}
+
+.animate-slideIn { 
+  animation: slideIn 0.6s ease-out forwards; 
+}
+
+.animate-slideUp { 
+  animation: slideUp 0.6s ease-out forwards; 
+}
+
+.animate-slideDown { 
+  animation: slideDown 0.6s ease-out forwards; 
+}
+
+.animate-shimmer { 
+  animation: shimmer 2s infinite; 
+}
+
+.animate-float { 
+  animation: float 6s ease-in-out infinite; 
+}
+
+.animate-pulse { 
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; 
+}
+
+.animate-bounce { 
+  animation: bounce 1s infinite; 
+}
+
+.animate-ping { 
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite; 
+}
+
+.animate-spin { 
+  animation: spin 1s linear infinite; 
+}
+
+/* Utility Classes */
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+}
+
+.backdrop-blur-xl {
+  backdrop-filter: blur(24px);
+}
+
+/* Gradient text support */
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.text-transparent {
+  color: transparent;
+}
